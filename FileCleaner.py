@@ -26,13 +26,22 @@ codext = [".py", ".js", ".css", ".html", ".c", ".cpp", ".java", ".r"]
 docsext = [".docs", ".ppt", ".pdf", ".md", ".doc", ".docx", ".txt"]
 softext = [".exe", ".msi"]
 
-createfolder("Images")
-createfolder("Media")
-createfolder("RAR/ZIP")
-createfolder("Code")
-createfolder("Docs")
-createfolder("Softwares")
-createfolder("Others")
+for file in files:
+    e = os.path.splitext(file)[1]
+    if(e in imgext):
+        createfolder("Images")
+    elif(e in medext):
+        createfolder("Media")
+    elif(e in rarext):
+        createfolder("RAR/ZIP")
+    elif(e in codext):
+        createfolder("Code")
+    elif(e in docsext):
+        createfolder("Docs")
+    elif(e in softext):
+        createfolder("Softwares")
+    else:
+        createfolder("Others")
 
 image = []
 media = []
