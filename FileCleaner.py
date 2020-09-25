@@ -1,6 +1,6 @@
 import os
 files = os.listdir()
-# files.remove("FileCleaner.py")
+files.remove("FileCleaner.py")
 
 
 def createfolder(foldername):
